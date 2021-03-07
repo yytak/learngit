@@ -16,3 +16,4 @@ git reset --hard HEAD(前面几个编号）恢复到某个时间点的文件
 git reflog 查看所有的修改
 
 My stupid boss still prefers svn
+这是新加的一行
