@@ -1,2 +1,4 @@
-Git is a distributed version control system
-Git is free software
+这是一个学习git的仓库
+用来作为学习笔记
+所有的命令都在里面
+
