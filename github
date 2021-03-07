@@ -19,3 +19,10 @@ git rm filename 在rm命令删除文件后，再用git rm这个命令删除暂�
 
 ssh-keygen -t rsa -C "youremail@example.com"  在~/.ssh这个目录下建立id_rsa和id_rsa.pub两个文件
 
+ssh-keygen -t rsa -C "youremail@example.com"  在~/.ssh这个目录下建立id_rsa和id_rsa.pub两个文件
+在github的设置里新建ssh keys，把id_rsa.pub填进去。
+git remote add origin git@github.com:yytak/yytak.github.io.git	为新建origin为远程仓库
+git push -u origin master  推送master主线到远程origin仓库
+git remote 查看当前配置有哪些远程仓库 git remote -v 每个别名的实际链接地址
+git fetch 从远程仓库下载新分支与数据
+git merge 从远程仓库提取数据并尝试合并到当前分支
