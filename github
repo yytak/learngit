@@ -26,3 +26,6 @@ git push -u origin master  推送master主线到远程origin仓库
 git remote 查看当前配置有哪些远程仓库 git remote -v 每个别名的实际链接地址
 git fetch 从远程仓库下载新分支与数据
 git merge 从远程仓库提取数据并尝试合并到当前分支
+jadjflaajdlfkjaldf
+aldkjfladf
+lakdlf
