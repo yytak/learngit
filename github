@@ -1,0 +1,18 @@
+https://www.liaoxuefeng.com/wiki/896043488029600/896827951938304
+
+1,安装---sudo apt-get install git
+2,配置 git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+3,初始化仓库，仓库所在的目录下执行“git init”
+4,
+
+git 命令
+git add ***   把文件添加到仓库（可反复使用，添加多个文件）--把文件放在暂存区
+git commit -m "说明" 提交文件，并为文件添加到仓库做说明--把文件入到master分支
+git status 查看仓库当前状态，就是被修改过，还没有准备提交的修改（在上次git add之后的改变）
+git diff 查看修改过的地方（在git add之后的改变）
+git log 查看所有修改
+git reset --hard HEAD(前面几个编号）恢复到某个时间点的文件
+git reflog 查看所有的修改
+
+My stupid boss still prefers svn
