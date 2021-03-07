@@ -14,6 +14,4 @@ git diff 查看修改过的地方（在git add之后的改变）
 git log 查看所有修改
 git reset --hard HEAD(前面几个编号）恢复到某个时间点的文件
 git reflog 查看所有的修改
-
-My stupid boss still prefers svn
-这是新加的一行
+git checkout -- filename 丢弃工作区的修改（未git add和git commit之前的改变）
