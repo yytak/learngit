@@ -1,10 +1,13 @@
 https://www.liaoxuefeng.com/wiki/896043488029600/896827951938304
 
-1,安装---sudo apt-get install git
-2,配置 git config --global user.name "Your Name"
-$ git config --global user.email "email@example.com"
-3,初始化仓库，仓库所在的目录下执行“git init”
-4,
+安装---sudo apt-get install git
+配置 
+git config user.name "user.name"（建立项目/仓库级别用户，仅在本地库范围内有效）
+git config user.email "user.email"（建立项目/仓库级别，登记邮件地址）-- ./.git/.config
+git config --global user.name "Your Name"（建立系统用户级别，登记用户名）
+$ git config --global user.email "email@example.com"（建立系统用户级别，登记邮件地址）--~/.gitconfig
+git init	初始化仓库，仓库所在的目录下执行
+
 
 git 命令
 git add ***   把文件添加到仓库（可反复使用，添加多个文件）--把文件放在暂存区
@@ -40,4 +43,8 @@ git pull <remote-name> <branch-name> # 从远程仓库拉取数据并合入当�
 git push [remote-name] [branch-name]  # 推送本地数据到远程仓库
 git remote rename <old> <new>  # 修改远程仓库的引用名称
 git remote rm <short-name>   # 移除指定远程仓库
+
+难点：
+git clone 克隆仓库到本地，无需git init初始化
+git pull = git fetch + git merge (git fetch不会合并数据）
  
