@@ -25,6 +25,7 @@ git branch #查看所有分支
 git branch "新分支名称"  #增加一个新的分支
 git branch -v 查看所有分支具体信息
 git checkout "分支名称"	#切换分区
+git merge "要合并的源分支"   #合并分支，首先到要接受合并的分支上，执行这个命令
 
 
 
