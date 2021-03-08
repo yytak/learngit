@@ -18,4 +18,22 @@ git checkout -- filename 丢弃工作区的修改（未git add和git commit之�
 git rm filename 在rm命令删除文件后，再用git rm这个命令删除暂存区里的文件
 
 ssh-keygen -t rsa -C "youremail@example.com"  在~/.ssh这个目录下建立id_rsa和id_rsa.pub两个文件
+在github的设置里新建ssh keys，把id_rsa.pub填进去。
 
+
+git remote add origin git@github.com:yytak/yytak.github.io.git	为新建origin为远程仓库
+git push -u origin master  推送master主线到远程origin仓库
+git remote 查看当前配置有哪些远程仓库 git remote -v 每个别名的实际链接地址
+git fetch 从远程仓库下载新分支与数据
+git merge 从远程仓库提取数据并尝试合并到当前分支
+
+git remote  # 查看远程服务器
+git remote -v    # 查看远程版本库信息
+git remote show [remote-name]   # 查看指定远程仓库的信息
+git remote add <short-name> <url> # 添加远程仓库
+git fetch [remote-name]    # 从远程仓库获取数据
+git pull <remote-name> <branch-name> # 从远程仓库拉取数据并合入当前分支
+git push [remote-name] [branch-name]  # 推送本地数据到远程仓库
+git remote rename <old> <new>  # 修改远程仓库的引用名称
+git remote rm <short-name>   # 移除指定远程仓库
+ 
