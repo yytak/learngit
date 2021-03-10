@@ -1,0 +1,9 @@
+格式化成ext4分区
+在根目录下创建.onething_data
+给文件夹加权限 sudo chattr +i .onething_data
+
+挂载
+新建文件夹 mkdir downloads
+挂载玩客云的硬盘：
+mount -t cifs -o username=root,password=**** //192.168.12.125/***/onecloud/tddownload
+
