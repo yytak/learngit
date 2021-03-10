@@ -5,5 +5,5 @@
 挂载
 新建文件夹 mkdir downloads
 挂载玩客云的硬盘：
-mount -t cifs -o username=root,password=**** //192.168.12.125/***/onecloud/tddownload
+mount -t cifs -o username=root,password=**** //192.168.12.125/***/onecloud/tddownload /download
 
