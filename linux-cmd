@@ -24,8 +24,17 @@ x	执行权限	可以执行文件		可以进入目录
 chown		改变文件或目录的所有者
 chgrp		改变文件或目录的所有组
 umask -S	-S 以rwx形式显示新建文件缺省权限 
-
+---------------------------------------------------------------------------------
 find [搜索范围] [匹配条件] 
+
+-name 按文件名	-iname 按文件名不分大小写 -size +- 按文件大小查找 -user -group 按用户和用户组查找 
+-amin 访问时间	-cmin 文件属性 -mmin 文件内容
+-type -f -d -l 文件 目录 软链接
+-inum 按节点查找
+-a (and) 	-o(or) 条件查找
+-exec/-ok    {} \;
+
+
 find /etc -name init 	在目录/etc中查找文件init  （*init*） 模糊搜索
 find /etc -iname init	不区分大小写搜索
 find / -size +204800  	在根目录查找100MB的文件
@@ -37,7 +46,11 @@ find / -type f(文件) d(目录) l(软链接文件)
 find / -inum	根据i节点查找find /etc -size +163840 -a -size -204800 -a(and) -o (or)
 		查找大于80MB and 小于100MB文件
 # find /etc -name init* -a -type -f 	查找名字为init*的文件
-find /etc -name initab -exec ls -l {} \;	/etc目录下查找initab，显示信息
+# find /etc -name initab -exec ls -l {} \;	/etc目录下查找initab，显示信息 ({} \;)为固定格式，前面是命令
+# find /etc -name init* -a -type f -exec ls -l {} \; 	查找init*的文件，并ls -l显示
+# find /home -user yytak -ok rm {} \;		查找用户yytak的文件，并删除，并逐一确认
+# find . -inum 31531 -exec rm {} \;		ls -i 可以查看特殊文件名文件，可以找到文件名，然后再删除这个文件（正常rm无法删除的时候用）
+
 	
 
 
