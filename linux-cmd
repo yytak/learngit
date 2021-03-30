@@ -1,5 +1,44 @@
-mkdir -p 			递归创建目录
-pwd				查看当前路径
-cp -rp				-r 复制目录 -p 保留文件属性
+ls -alh		-a显示隐藏 -l详细显示 -d查看目录属性 -h人性化 -i
+mkdir -p 		递归创建目录
+pwd			查看当前路径
+cp -rp			-r 复制目录 -p 保留文件属性
+rm -rf			-r 删除目录 -f 强制执行
+
+touch			创建空文件
+cat			-n 查看n行
+tac			反向cat
+more			(空格)或f 翻页 （enter）换行，q退出
+less			同more，可以上翻，more不行 （/搜索的词）可搜索
+head -n 20		-n 看前面的20行
+tail -n 20		-n 看最后20行
+
+ln -s			-s 创建软链接文件 硬链接可以同步更新
+
+chmod (ugoa) (+-=) (rwx) / (mode=421) /-R 递归修改
+
+	权限		对文件的含义		对目录的含义	
+r 	读权限		可以查看文件内容	可以列出目录中的内容
+w	写权限		可以修改文件内容	可以在目录中创建，删除文件
+x	执行权限	可以执行文件		可以进入目录
+	 
+chown		改变文件或目录的所有者
+chgrp		改变文件或目录的所有组
+umask -S	-S 以rwx形式显示新建文件缺省权限 
+
+find [搜索范围] [匹配条件] 
+find /etc -name init 	在目录/etc中查找文件init  （*init*） 模糊搜索
+find /etc -iname init	不区分大小写搜索
+find / -size +204800  	在根目录查找100MB的文件
+find /home -user yytak	在目录下查找所有者为yytak的文件
+find /home -group yytak 	根据所属组查找
+find /etc -cmin -5 	在目录/etc下查找5分钟内被修改过属性的文件和目录
+find -amin(访问时间access) -cmin(文件属性change) -mmin(文件内容modify)
+find / -type f(文件) d(目录) l(软链接文件)
+find / -inum	根据i节点查找find /etc -size +163840 -a -size -204800 -a(and) -o (or)
+		查找大于80MB and 小于100MB文件
+# find /etc -name init* -a -type -f 	查找名字为init*的文件
+find /etc -name initab -exec ls -l {} \;	/etc目录下查找initab，显示信息
+	
+
 
 
