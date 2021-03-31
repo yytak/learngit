@@ -50,8 +50,21 @@ find / -inum	根据i节点查找find /etc -size +163840 -a -size -204800 -a(and)
 # find /etc -name init* -a -type f -exec ls -l {} \; 	查找init*的文件，并ls -l显示
 # find /home -user yytak -ok rm {} \;		查找用户yytak的文件，并删除，并逐一确认
 # find . -inum 31531 -exec rm {} \;		ls -i 可以查看特殊文件名文件，可以找到文件名，然后再删除这个文件（正常rm无法删除的时候用）
+----------------------------------------------------
+locate
+updatedb 	更新数据库文件(除tmp目录以外)
+locate -i  	-i 不区分大小写搜索
 
-	
+搜索命令的命令(只搜索可执行文件) which whereis
+
+grep -iv 	-i 不区分大小写 -v 排除指定字串 	在文件内容中查找特定字符
+grep -i mysql /root/install.log
+
+
+
+
+
+
 
 
 
