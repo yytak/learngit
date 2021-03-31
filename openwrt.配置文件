@@ -1,0 +1,65 @@
+openwrt常用目录 
+
+1.bin->binary 存放程序
+
+2.sbin->system binary系统相关的程序
+
+(重要度 bin>sbin>xx/bin>xx/sbin)
+
+3.etc->配置文件，比如DHCP、。。
+
+4.mnt->挂载点 CDROM/USB等
+
+5.proc和sys都是内核穿甲你的系统相关文件，比如cpu型号等到
+
+6.usr是用户的目录
+
+7.www是luci等资源文件
+
+
+
+
+
+基本配置
+/etc/config/dhcp    dnsmasq和DHCP的配置
+/etc/config/dropbear    SSH服务端选项
+/etc/config/firewall    中央防火墙配置
+/etc/config/network 交换，接口和路由配置
+/etc/config/system  杂项与系统配置
+/etc/config/timeserver  rdate的时间服务器列表
+/etc/config/wireless    无线设置和无线网络的定义
+
+IPV6
+/etc/config/ahcpd   Ad-Hoc配置协议(AHCP) 服务端配置以及转发器配置
+/etc/config/aiccu   AICCU 客户端配置
+/etc/config/dhcp6c  WIDE-DHCPv6 客户端配置
+/etc/config/dhcp6s  WIDE-DHCPv6 服务端配置
+/etc/config/gw6c    GW6c 客户端配置
+/etc/config/radvd   路由通告 (radvd) 配置
+
+其他
+/etc/config/etherwake   以太网唤醒: etherwake
+/etc/config/fstab   挂载点及swap
+/etc/config/hd-idle 另一个可选的硬盘空闲休眠进程(需要路由器支持usb硬盘)
+/etc/config/httpd   网页服务器配置选项(Busybox 自带httpd, 已被舍弃)
+/etc/config/luci    基础 LuCI 配置
+/etc/config/luci_statistics 包统计配置
+/etc/config/mini_snmpd  mini_snmpd 配置
+/etc/config/mountd  OpenWrt 自动挂载进程(类似autofs)
+/etc/config/multiwan    简单多WAN出口配置
+/etc/config/ntpclient   ntp客户端配置，用以获取正确时间
+/etc/config/pure-ftpd   Pure-FTPd 服务端配置
+/etc/config/qos QoS配置(流量限制与整形)
+/etc/config/samba   samba配置(Microsoft文件共享)
+/etc/config/snmpd   SNMPd(snmp服务进程) 配置
+/etc/config/sshtunnel   sshtunnel配置
+/etc/config/stund   STUN 服务端配置
+/etc/config/transmission    BitTorrent配置
+/etc/config/uhttpd  Web服务器配置(uHTTPd)
+/etc/config/upnpd   miniupnpd UPnP服务器配置
+/etc/config/ushare  uShare UPnP 服务器配置
+/etc/config/vblade  vblade 用户空间AOE(ATA over Ethernet)配置
+/etc/config/vnstat  vnstat 下载器配置
+/etc/config/wifitoogle  使用按钮来开关WiFi的脚本
+/etc/config/wol Wake-on-Lan: wol
+/etc/config/znc ZNC 配置
