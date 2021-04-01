@@ -87,23 +87,25 @@ tar -xjf *.bz2
 -------------------------------------------------------------------------
 网络命令  
 ifconfig [网卡名称] []		eth* 网卡 wlp* 无线网卡 lo 回环网卡（本地网络）
-wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.12.185  netmask 255.255.255.0  broadcast 192.168.12.255			
-        inet6 fd9d:24e4:4fdc:0:f261:8a95:6ec7:b453  prefixlen 64  scopeid 0x0<global>
-        inet6 fd9d:24e4:4fdc::23e  prefixlen 128  scopeid 0x0<global>
-        inet6 fe80::d67:5703:84bf:fd29  prefixlen 64  scopeid 0x20<link>
-        inet6 fd9d:24e4:4fdc:0:7bd6:95d:5dcb:1c88  prefixlen 64  scopeid 0x0<global>
-        ether 08:71:90:33:4d:7a  txqueuelen 1000  (以太网)
-        RX packets 8152531  bytes 8404229469 (8.4 GB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 4604460  bytes 1521090776 (1.5 GB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
+ 
 netstat [选项]  -t TCP协议 -u UDP协议 -l 监听 -r 路由 -n 显示IP地址和端口号	显示网络相关信息
 netstat -tlun 	查看本机监听的端口  	-an 查看本机所有的网络连接 	-rn 查看本机路由表
 
 setup 设置网络（centos)
+
+mount [-t 文件系统] 设备文件名 挂载点
+# mount -t iso9660 /dev/sr0 /mnt/cdrom
 -------------------------------------------------------------------------------
+shutdown -h now/20:20/ 	关机	
+shutdown -r now/20:20/		重启	shutdown -c 取消关机
+
+halt/poweroff/init 0  关机 
+reboot/init 6  重启
+
+init 0-6  0-关机 1-单用户(安全模式) 2-不完全多用户，不含nfs服务 3-完全多用户 4-未分配 5-图形界面 6-重启
+runlevel 查看运行级别
+-------------------------------------------------------------------------------
+
 
 
 
