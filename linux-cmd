@@ -105,7 +105,14 @@ reboot/init 6  重启
 init 0-6  0-关机 1-单用户(安全模式) 2-不完全多用户，不含nfs服务 3-完全多用户 4-未分配 5-图形界面 6-重启
 runlevel 查看运行级别
 -------------------------------------------------------------------------------
+/etc/passwd	用户信息文件
+root:x:0:0:root:/root:/boot/bash	root(用户名):x(有密码):0(超级用户.0超级.1-499.系统.500-65535.普通用户):0(GID.组):root(用户说明):/root(用户家目录):/boot/bash(shell路径)
+lenovo:x:1000:1000:lenovo,,,:/home/lenovo:/bin/bash
 
+/etc/shadow	影子文件
+root:!:18480:0:99999:7:::	root(用户名):!(!.!!.*是无密码或不能登陆):18480(最后一次登陆时间):0():99999():7():::
+lenovo:$6$fRehGMunqNy6rYx5$4ZfnfXQG51jWslyQZFvd6U/oThtVLQ4rWLwILu3X/cJgipumCiLcEwJk4MYSIDl/4FI2EBLCZR7HYXoG0/3qC.:18480:0:99999:7:::
+/etc/group	组信息文件   /etc/gshadow	组密码文件
 
 
 

@@ -1,0 +1,120 @@
+数据类型（1,Numbers,数字类型。2,Strings,字符串类型。3,Lists，列表类型。4，Tuples，元组类型。5,Dictionaries，字典类型。6,Sets,集合类型）
+
+数字类型：1,整形（Integers),2，浮点型（Floating)，3,复数（Complex)
+布尔型（Booleans) ，True,False
+
+type() 查看变量类型，float() 转换变量为浮点型，str() 转换变量为字符串，int() 转换变量为整数，bool() 转换变量为布尔型。
+--------------------------------------------------------------------------------------------------
++-*/（加减乘除）%（取模：除法运算求余数），**(幂，返回X的Y次幂)，//（取整数，返回商整数部分）
+==（等于：判断是否相等），!=(不等于：判断是否不等于)，>(大于，判断是否大于)，<(小于，判断是否小于)，>=(大于等于，判断是否大于等于),<=(小于等于，判断是否小于等于)
+and(x and y.判断xy是否同时成立）， or(x or y，判断xy是否有一成立)，not(not x,判断是否不等于)
+=(x=z+y,直接赋值)，+=(x=x+y,加法赋值),-+(x=x-y,减法赋值),*=(x=x*y,乘法赋值),/=(x=x/y),%=(x=x%y),**=(x=x**y),//=(x=x//y)
+
+(**)>(+x,-x,~x)>(*,/,%,//)>(+,-)>(>>,<<)>(%)>(^)>(|)>(>=,<>,<=)>(==,!=)>(=,%=,/=,//=,-=,+=,*=,**=)>(not)>(and)>(or)
+-------------------------------------------------------------
+列表： listname[元素1,元素2,元素3]	列表中的元素是可换的，元组不可换
+del listname[索引] 			删除列表中的一个元素
+listname.remove("值")			删除列表中的一个“值”
+del listname 				删除整个列表
+
+len(listname)				返回列表的元素数量
+max(listname)				返回列表中元素的最大值
+min(listname)				返回列表中元素的最小值
+list(tuple)				将元组转换为列表
+
+listname.append(元素）			添加新的元素在列表末尾
+listname.count(元素)			统计该元素在列表中出现的次数
+listname.extend(序列)			追加另一个序列类型中的多个值，到该列表末尾 （用新列表扩原来的列表）
+listname.index(元素)			从列表中找出某个值第一个匹配元素的索引位置
+listname.insert(位置,元素）		将元素插入列表
+listname.pop([index=-1])		移除列表中的最后一个元素，并返回该元素的值
+listname.remove(元素)			移除列表中的第一个匹配某个值的元素
+listname.reverse()			将列表中元素反向
+listname.sort(cmp=None,key=None,reverse=False)	对列表进行排序
+listname.clear()			清空列表
+listname.copy()			复制列表
+
+------------------------------------------------------------------------------------------
+tuplename = (元素1,元素2,元素3)	元组中的元素是不可替换的
+len(tuplename)			返回元组的元素数量
+max(tuplename)		返回元组中元素的最大值
+min(tuplename)		返回元组中元素的最小值
+tuple(listname)	将列表转换成元组
+--------------------------------------------------------------------------------------------
+dictname = {键1:值1,键2:值2,键3:值3,键4:值4} 同一字典中键是唯一，值无限制。
+
+dictname ["键"] = ['新值'] 	对字典已有的值进行修改
+dictname ['键'] = ['值']	把新的键和值添加到字典
+del dictname [键]	删除字典中的键和对应的值
+del dictname 		删除字典
+
+len(dickname)		统计字典中键的总数
+str(dictname)		输出字典
+type(dictname)		返回字典类型
+
+dictname.clear()	删除字典所有元素，清空字典
+dictname.copy()	以字典类型返回某个字典的浅复制
+dictname.fromkeys(seq[,value])	创建一个新字典,以序列中的元素做字典的键,值为字典所有键对应的初始值
+dictname.get(value,default=None)	返回指定键的值，如果值不在字典中返回default值
+key in dictname	如果键在字典dict里返回true，否则返回false
+dictname.items()	以列表返回可遍历的（键，值）元组数组
+dictname.keys()	将一个字典所有的键生成列表并返回
+dictname.setdefault(value,default=None) 和dictname.get()类似, 不同点是,如果键不存在于字典中,将会添加键并将值设为default对应的值
+dictname.update(dictname2)	把字典dictname2的键/值对更新到dictname里
+dictname.values()		以列表返回字典中的所有值
+dictname.pop(key[,default])	弹出字典给定键所对应的值,返回值为被删除的值。键值必须给出。 否则,返回default值
+dictname.popitem()	弹出字典中的一对键和值(一般删除末尾对),并删除
+----------------------------------------------------------------------------------------------------
+set = {值1,值2,值3}   
+set = set([值1,值2,值3])	创建非空集合，集合的特点是可以去掉重复的元素。集合是无序的，没有索引和键
+
+setname.add(元素)	把内容作为一个元素加入到集合
+setname.update(others)	向集合中添加多个元素。
+len(setname)		输出集合的元素数量
+setname.remove(元素)	删除集合中的元素
+del setname		删除集合
+集合之间可以做集合运算,求差集(difference)、并集(union)、交集(intersection)、对称差集(symmetric difference)
+
+ss.add(元素)	向集合ss中添加元素
+ss.remove(元素)	从集合ss中删除元素，如果无该元素，返回keyerror
+ss.discard(元素)	从集合ss中删除元素，如果无该元素，则什么都不做
+ss.pop()		移除并返回集合ss中的任一元素，如果ss为空，则报告keyerror
+ss.clear()		清空集合ss中所有的元素
+
+len(ss)	返回集合的元素个数
+x in ss	测试x是否是集合中的元素，返回true或false
+x not in ss 	测试x不在集合ss中，返回true，否则则返回false
+ss.isdisjoint(otherset) 	当集合ss与另一集合otherset不相交时,返回True,否则返回False
+ss.issubset(otherset) 或 ss <= otherset 	如果集合ss是另一集合otherset的子集,返回True,否则返回False
+ss>otherset	如果集合ss是另一集合otherset的真子集，返回true，否则返回false
+ss.union(*othersets) 或ss | otherset1 | otherset2 ... 	返回ss和othersets的并集,包含有set和othersets的所有元素
+ss.intersection(*othersets)或ss & otherset1 & otherset2 ...	返回ss和othersets的交集,包含在ss并且也在othersets中的元素
+ss.difference(*othersets) 或ss - otherset1 - otherset2 ...	返回ss与othersets的差集,只包含在ss中但不在othersets中的元素
+ss.symmetric_difference(otherset) 或set ^ otherset	返回ss与otherset的对称差集,只包含在ss中但不在othersets中,和不在ss中但在othersets中的元素
+ss.copy()	返回集合ss的浅拷贝
+ss.update(*othersets) 或ss |= otherset1 | otherset2 ...	将另外的一个集合或多个集合元素,添加到集合ss中
+ss.intersection_update(*othersets) 或set &= otherset1 & otherset2...	在ss中保留它与其他集合的交集
+ss.difference_update(*othersets) 或ss -= otherset1 | otherset2 ...	从ss中移除它与其他集合的交集,保留不在其他集合中的元素
+ss.symmetric_difference_update(otherset) 或 ss ^= otherset		集合ss与另一集合otherset交集的补集,将结果返回到ss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
